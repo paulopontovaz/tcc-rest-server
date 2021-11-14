@@ -12,62 +12,73 @@ import {
 
 const Schema = mongoose.Schema;
 
-const PokemonStatsSchema = new Schema<PokemonStats>({
-	hp: Number,
-	attack: String,
-	defense: String,
-	spattack: String,
-	spdefense: String,
-	speed: Number,
-});
+const PokemonStatsSchema = new Schema<PokemonStats>(
+	{
+		hp: Number,
+		attack: String,
+		defense: String,
+		spattack: String,
+		spdefense: String,
+		speed: Number,
+	},
+	{ _id: false }
+);
 
-const PokemonMoveSchema = new Schema<PokemonMove>({
-	learnedat: String,
-	name: String,
-});
+const PokemonMoveSchema = new Schema<PokemonMove>(
+	{
+		learnedat: String,
+		name: String,
+	},
+	{ _id: false }
+);
 
-const PokemonMovesSchema = new Schema<PokemonMoves>({
-	level: [PokemonMoveSchema],
-});
+const PokemonMovesSchema = new Schema<PokemonMoves>(
+	{
+		level: [PokemonMoveSchema],
+	},
+	{ _id: false }
+);
 
-const PokemonAbilitiesSchema = new Schema<PokemonAbilities>({
-	normal: [{ type: String }],
-	hidden: [{ type: String }],
-});
+const PokemonAbilitiesSchema = new Schema<PokemonAbilities>(
+	{
+		normal: [{ type: String }],
+		hidden: [{ type: String }],
+	},
+	{ _id: false }
+);
 
-const PokemonDamagesSchema = new Schema<PokemonDamages>({
-	normal: String,
-	fire: String,
-	water: String,
-	electric: String,
-	grass: String,
-	ice: String,
-	fight: String,
-	poison: String,
-	ground: String,
-	flying: String,
-	psychic: String,
-	bug: String,
-	rock: String,
-	ghost: String,
-	dragon: String,
-	dark: String,
-	steel: String,
-});
+const PokemonDamagesSchema = new Schema<PokemonDamages>(
+	{
+		normal: String,
+		fire: String,
+		water: String,
+		electric: String,
+		grass: String,
+		ice: String,
+		fight: String,
+		poison: String,
+		ground: String,
+		flying: String,
+		psychic: String,
+		bug: String,
+		rock: String,
+		ghost: String,
+		dragon: String,
+		dark: String,
+		steel: String,
+	},
+	{ _id: false }
+);
 
-const PokemonMiscSchema = new Schema<PokemonMisc>({
-	abilities: PokemonAbilitiesSchema,
-	classification: String,
-	height: String,
-	weight: String,
-	capturerate: String,
-	eggsteps: String,
-	expgrowth: String,
-	happiness: String,
-	evpoints: [{ type: String }],
-	fleeflag: String,
-	entreeforestlevel: String,
-});
+const PokemonMiscSchema = new Schema<PokemonMisc>(
+	{
+		abilities: PokemonAbilitiesSchema,
+		classification: String,
+		height: String,
+		weight: String,
+	},
+	{ _id: false }
+);
 
 const PokemonSchema = new Schema<Pokemon>(
 	{

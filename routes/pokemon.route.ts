@@ -24,10 +24,12 @@ pokemonExpressRoute.route("/pokemon").get((req: any, res: any, next: any) => {
 		.exec(handleError(res, next));
 });
 
-pokemonExpressRoute.route("/pokemon").get((req: any, res: any, next: any) => {
-	console.log("Fetch pokemon");
-	PokemonSchema.find({ id: req.params.id }, handleError(res, next));
-});
+pokemonExpressRoute
+	.route("/pokemon/:id")
+	.get((req: any, res: any, next: any) => {
+		console.log("Fetch pokemon req.params:", req.params);
+		PokemonSchema.findOne({ id: req.params.id }, handleError(res, next));
+	});
 
 pokemonExpressRoute
 	.route("/pokemon/:id")

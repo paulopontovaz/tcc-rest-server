@@ -67,13 +67,6 @@ export interface PokemonMisc {
 	readonly classification: string;
 	readonly height: string;
 	readonly weight: string;
-	readonly capturerate: number;
-	readonly eggsteps: string;
-	readonly expgrowth: string;
-	readonly happiness: string;
-	readonly evpoints: string[];
-	readonly fleeflag: string;
-	readonly entreeforestlevel: string;
 }
 
 export interface Pokemon {
