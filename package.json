@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"serve": "nodemon ./server.ts",
-		"seed": "ts-node ./seed.ts"
+		"seed": "ts-node ./db/seed.ts"
 	},
 	"keywords": [],
 	"author": "",

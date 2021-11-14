@@ -1,10 +1,10 @@
 import * as fs from "fs";
 import mongoose from "mongoose";
-import dbConfig from "./db/database";
-import { Pokemon } from "./model/pokemon.model";
-import PokemonSchema from "./schema/pokemon.schema";
+import dbConfig from "./database";
+import { Pokemon } from "../model/pokemon.model";
+import PokemonSchema from "../schema/pokemon.schema";
 
-const rawdata = fs.readFileSync("./db.json");
+const rawdata = fs.readFileSync("./db/db.json");
 const pokemonSeedData = JSON.parse(rawdata.toString());
 
 const handleError = (error: any) => {
