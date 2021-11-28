@@ -1,8 +1,8 @@
 import * as fs from "fs";
 import mongoose from "mongoose";
 import dbConfig from "./database";
-import { Pokemon } from "../model/pokemon.model";
-import PokemonSchema from "../schema/pokemon.schema";
+import { Pokemon } from "../types/pokemon.type";
+import PokemonModel from "../model/pokemon.model";
 
 const rawdata = fs.readFileSync("./db/db.json");
 const pokemonSeedData = JSON.parse(rawdata.toString());
@@ -23,7 +23,7 @@ mongoose
 			console.log("Starting to insert Pokémon: ", pokemon.name);
 
 			try {
-				PokemonSchema.create(pokemon, handleError);
+				PokemonModel.create(pokemon, handleError);
 			} catch (err) {
 				console.log("Fell in catch: ", err);
 			}

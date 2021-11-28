@@ -1,5 +1,5 @@
 import * as express from "express";
-import PokemonSchema from "../schema/pokemon.schema";
+import PokemonModel from "../model/pokemon.model";
 
 const pokemonExpressRoute = express.Router();
 
@@ -19,7 +19,7 @@ pokemonExpressRoute.route("/pokemon").get((req: any, res: any, next: any) => {
 		: {};
 	console.log("Fetch pokemon list searchParams", searchParams);
 
-	PokemonSchema.find(searchParams)
+	PokemonModel.find(searchParams)
 		.sort({ id: "asc" })
 		.exec(handleError(res, next));
 });
@@ -28,7 +28,7 @@ pokemonExpressRoute
 	.route("/pokemon/:id")
 	.get((req: any, res: any, next: any) => {
 		console.log("Fetch pokemon req.params:", req.params);
-		PokemonSchema.findOne({ id: req.params.id }, handleError(res, next));
+		PokemonModel.findOne({ id: req.params.id }, handleError(res, next));
 	});
 
 pokemonExpressRoute
@@ -36,7 +36,7 @@ pokemonExpressRoute
 	.put((req: any, res: any, next: any) => {
 		console.log("Edit pokemon params: ", req.params);
 		console.log("Edit pokemon body: ", req.body);
-		PokemonSchema.findOneAndUpdate(
+		PokemonModel.findOneAndUpdate(
 			{ id: req.params.id },
 			{ nickname: req.body.nickname },
 			{ new: true },
@@ -48,7 +48,7 @@ pokemonExpressRoute
 	.route("/pokemon/:id")
 	.delete((req: any, res: any, next: any) => {
 		console.log("Delete pokemon: ", req.params);
-		PokemonSchema.findOneAndDelete(
+		PokemonModel.findOneAndDelete(
 			{ id: req.params.id },
 			handleError(res, next)
 		);
