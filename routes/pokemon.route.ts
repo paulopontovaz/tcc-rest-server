@@ -31,27 +31,4 @@ pokemonExpressRoute
 		PokemonModel.findOne({ id: req.params.id }, handleError(res, next));
 	});
 
-pokemonExpressRoute
-	.route("/pokemon/:id")
-	.put((req: any, res: any, next: any) => {
-		console.log("Edit pokemon params: ", req.params);
-		console.log("Edit pokemon body: ", req.body);
-		PokemonModel.findOneAndUpdate(
-			{ id: req.params.id },
-			{ nickname: req.body.nickname },
-			{ new: true },
-			handleError(res, next)
-		);
-	});
-
-pokemonExpressRoute
-	.route("/pokemon/:id")
-	.delete((req: any, res: any, next: any) => {
-		console.log("Delete pokemon: ", req.params);
-		PokemonModel.findOneAndDelete(
-			{ id: req.params.id },
-			handleError(res, next)
-		);
-	});
-
 export default pokemonExpressRoute;
