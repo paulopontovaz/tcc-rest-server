@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"serve": "nodemon ./server.ts",
-		"seed": "ts-node ./db/seed.ts"
+		"serve": "nodemon ./server/index.ts",
+		"seed": "ts-node ./server/db/seed.ts"
 	},
 	"keywords": [],
 	"author": "",
