@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Genese complexity report</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./../reports-styles/prism.css" />
+    <link rel="stylesheet" href="./../reports-styles/prettify.css" />
+    <link rel="stylesheet" href="./../reports-styles/report.css" />
+    <link rel="stylesheet" href="./../reports-styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="header">
+    <div class="header-left">
+        <div>
+            <h1>Genese complexity report</h1>
+        </div>
+        <div class="pad1y">
+            <span class="backLink" onclick="history.back()"><-</span>
+            types\
+        </div>
+        <div class="clearfix">
+            <div class='fl pad1y space-right2'>
+                <span>Methods : </span>
+                <span class="strong">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="clearfix padly">
+            <div class='fl pad1y space-right2'>
+                <span>Comprehension complexity : </span>
+                <span class="strong">0</span>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class='fl pad1y space-right2'>
+                <span>Cyclomatic complexity :</span>
+                <span class="strong">0</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--        -------------------------------------------------------------------------------------->
+<!--        -----------------------------------   Stats and charts   ----------------------------->
+<!--        -------------------------------------------------------------------------------------->
+
+
+<div class="mainContainer">
+    <div class="stats-and-charts">
+
+        <!--        -----------------------------------   Cognitive complexity   ---------------------------->
+
+        <div class="stats-cognitive">
+            <div class="stats-and-doughnut stats-and-doughnut-cognitive">
+                <div class="doughnut">
+                    <canvas id="doughnut-cognitive-cpx" height="220"></canvas>
+                </div>
+                <div class="stats">
+                    <div class="clearfix">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">Comprehension complexity</span>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">0 %</span>
+                            <span class="quiet"> Low</span>
+                            <span
+                                    class='fraction'>0/0</span>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">0 %</span>
+                            <span class="quiet"> Medium</span>
+                            <span
+                                    class='fraction'>0/0</span>
+                            <span class="quiet">(threshold : 10)</span>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">0 %</span>
+                            <span class="quiet"> High</span>
+                            <span
+                                    class='fraction'>0/0</span>
+                            <span class="quiet">(threshold : 20)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bar bar-cognitive">
+                <canvas id="bar-cognitive-cpx" class="cognitive-charts"></canvas>
+            </div>
+        </div>
+
+        <!--        -----------------------------------   Cyclomatic complexity   ---------------------------->
+
+        <div class="stats-cyclomatic">
+            <div class="stats-and-doughnut-cyclomatic">
+                <div class="doughnut">
+                    <canvas id="doughnut-cyclomatic-cpx" height="220"></canvas>
+                </div>
+                <div class="stats-cy">
+                    <div class="clearfix cyclomatic-subtitle">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">Cyclomatic complexity</span>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">0 %</span>
+                            <span class="quiet"> Low</span>
+                            <span
+                                    class='fraction'>0/0</span>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">0 %</span>
+                            <span class="quiet"> Medium</span>
+                            <span
+                                    class='fraction'>0/0</span>
+                            <span class="quiet">(threshold : 5)</span>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class='fl pad1y space-right2'>
+                            <span class="strong">0 %</span>
+                            <span class="quiet"> High</span>
+                            <span
+                                    class='fraction'>0/0</span>
+                            <span class="quiet">(threshold : 10)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar bar-cyclomatic">
+                <canvas id="bar-cyclomatic-cpx" class="cyclomatic-charts"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--        -------------------------------------------------------------------------------------->
+    <!--        ------------------------------------   Code of files   ------------------------------->
+    <!--        -------------------------------------------------------------------------------------->
+
+
+    <div idclass="subfolders">
+        <div class="clearfix file-methods-subtitle">
+            <div class='fl pad1y space-right2'>
+                <span id="spanDisplayFilesArray" class="strong">Display files of <span class="italic">types\</span></span>
+            </div>
+        </div>
+
+        <div id="filesArray">
+                <div id="pokemon.type.ts">
+                    <table class="array-report method-table">
+                        <thead class="method-thead">
+                        <tr>
+                            <th class="method-name-column">
+                                <span class="strong">pokemon.type.ts</span>
+                            </th>
+                            <th class="right bgwhite">Comprehension complexity</th>
+                            <th class="bglowLvl">0</th>
+                            <th class="right bgwhite">Cyclomatic complexity</th>
+                            <th class="bglowLvl">0</th>
+                        </tr>
+                        </thead>
+                        <tbody class="method-body">
+                        <tr class="code-row">
+                            <td colspan="5">
+                                    <pre>
+                                <code class="language-js">
+                                    export enum PokemonType {
+                	NORMAL &#x3D; &quot;Normal&quot;,
+                	FIRE &#x3D; &quot;Fire&quot;,
+                	WATER &#x3D; &quot;Water&quot;,
+                	ELECTRIC &#x3D; &quot;Electric&quot;,
+                	GRASS &#x3D; &quot;Grass&quot;,
+                	ICE &#x3D; &quot;Ice&quot;,
+                	FIGHTING &#x3D; &quot;Fighting&quot;,
+                	POISON &#x3D; &quot;Poison&quot;,
+                	GROUND &#x3D; &quot;Ground&quot;,
+                	FLYING &#x3D; &quot;Flying&quot;,
+                	PSYCHIC &#x3D; &quot;Psychic&quot;,
+                	BUG &#x3D; &quot;Bug&quot;,
+                	ROCK &#x3D; &quot;Rock&quot;,
+                	GHOST &#x3D; &quot;Ghost&quot;,
+                	DRAGON &#x3D; &quot;Dragon&quot;,
+                	DARK &#x3D; &quot;Dark&quot;,
+                	STEEL &#x3D; &quot;Steel&quot;,
+                	FAIRY &#x3D; &quot;Fairy&quot;,
+                }
+                
+                export interface PokemonStats {
+                	readonly hp: number;
+                	readonly attack: string;
+                	readonly defense: string;
+                	readonly spattack: string;
+                	readonly spdefense: string;
+                	readonly speed: number;
+                }
+                
+                export interface PokemonMove {
+                	readonly learnedat: string;
+                	readonly name: string;
+                }
+                
+                export interface PokemonMoves {
+                	readonly level: PokemonMove[];
+                }
+                
+                export interface PokemonDamages {
+                	readonly normal: string;
+                	readonly fire: string;
+                	readonly water: string;
+                	readonly electric: string;
+                	readonly grass: string;
+                	readonly ice: string;
+                	readonly fight: string;
+                	readonly poison: string;
+                	readonly ground: string;
+                	readonly flying: string;
+                	readonly psychic: string;
+                	readonly bug: string;
+                	readonly rock: string;
+                	readonly ghost: string;
+                	readonly dragon: string;
+                	readonly dark: string;
+                	readonly steel: string;
+                }
+                
+                export interface PokemonAbilities {
+                	readonly normal: string[];
+                	readonly hidden: string[];
+                }
+                
+                export interface PokemonMisc {
+                	readonly abilities: PokemonAbilities;
+                	readonly classification: string;
+                	readonly height: string;
+                	readonly weight: string;
+                }
+                
+                export interface Pokemon {
+                	readonly id: number;
+                	readonly name: string;
+                	readonly img: string;
+                	nickname: string;
+                	readonly moves: PokemonMoves;
+                	readonly damages: PokemonDamages;
+                	readonly stats: PokemonStats;
+                	readonly misc: PokemonMisc;
+                	readonly type: PokemonType[];
+                }
+                
+                                </code>
+                            </pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--        -------------------------------------------------------------------------------------->
+<!--        -----------------------------------   Scripts   -------------------------------------->
+<!--        -------------------------------------------------------------------------------------->
+
+
+
+<script src="././../reports-styles/Chart.js"></script>
+<script src="./../reports-styles/prism.js"></script>
+
+<script>
+    var ctxDougnutCognitive = document.getElementById('doughnut-cognitive-cpx').getContext("2d");
+    var doughnutCognitive = new Chart(ctxDougnutCognitive, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    0,
+                    0,
+                    0,
+                ],
+                backgroundColor: [
+                        '#99ccff',
+                        '#ffa31a',
+                        '#ff3300',
+                ]
+            }],
+            labels: [
+                'low cpx methods ',
+                'medium cpx methods ',
+                'high cpx methods ',
+            ]
+        },
+        options: {
+            layout: {
+                padding: {
+                    maintainAspectRatio: false,
+                    responsive: false,
+                    left: 50,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            legend: {
+                display: false
+            },
+            position: 'left',
+            title: {
+                display: true,
+                text: 'Comprehension complexity'
+            }
+        }
+    });
+</script>
+<script>
+    var ctxBarCognitive = document.getElementById('bar-cognitive-cpx').getContext("2d");
+    var barCognitive = new Chart(ctxBarCognitive, {
+        type: 'bar',
+        data: {
+            labels: [
+            ],
+            datasets: [{
+                data: [
+                ],
+                backgroundColor: [
+                ],
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Comprehension complexity'
+                    },
+                    ticks: {
+                        suggestedMin: 0
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Number of methods'
+                    },
+                    ticks: {
+                        suggestedMin: 0
+                    }
+                }]
+            }
+        }
+    });
+</script>
+<script>
+    var ctxDougnutCyclomatic = document.getElementById('doughnut-cyclomatic-cpx').getContext("2d");
+    var doughnutCyclomatic = new Chart(ctxDougnutCyclomatic, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    0,
+                    0,
+                    0,
+                ],
+                backgroundColor: [
+                        '#99ccff',
+                        '#ffa31a',
+                        '#ff3300',
+                ]
+            }],
+            labels: [
+                'low cpx methods ',
+                'medium cpx methods ',
+                'high cpx methods ',
+            ]
+        },
+        options: {
+            layout: {
+                padding: {
+                    maintainAspectRatio: false,
+                    responsive: false,
+                    left: 50,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            legend: {
+                display: false
+            },
+            position: 'left',
+            title: {
+                display: true,
+                text: 'Cyclomatic complexity'
+            }
+        }
+    });
+</script>
+<script>
+    var ctxBarCyclomatic = document.getElementById('bar-cyclomatic-cpx').getContext("2d");
+    var barCyclomatic = new Chart(ctxBarCyclomatic, {
+        type: 'bar',
+        data: {
+            labels: [
+            ],
+            datasets: [{
+                data: [
+                ],
+                backgroundColor: [
+                ],
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: false,
+                text: 'Cyclomatic complexity',
+                position: 'top'
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Cyclomatic complexity'
+                    },
+                    ticks: {
+                        suggestedMin: 0
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Number of methods'
+                    },
+                    ticks: {
+                        suggestedMin: 0
+                    }
+                }]
+            }
+        }
+    });
+</script>
+
+</body>
+
+</html>
