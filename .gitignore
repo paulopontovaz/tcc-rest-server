@@ -1,2 +1,7 @@
-**/node_modules
-**/dist
+node_modules
+genese
+report
+.DS_Store
+dist
+dist-ssr
+*.local
