@@ -14,8 +14,9 @@ const handleError = (res: any, next: any) => (error: any, data: any) => {
 
 pokemonExpressRoute.route("/pokemon").get((req: any, res: any, next: any) => {
 	console.log("Fetch pokemon list req.query", req.query);
-	const searchParams = req.query.q
-		? { name: { $regex: req.query.q, $options: "i" } }
+	const query = req.query?.q?.toString();
+	const searchParams = query
+		? { name: { $regex: query, $options: "i" } }
 		: {};
 	console.log("Fetch pokemon list searchParams", searchParams);
 
