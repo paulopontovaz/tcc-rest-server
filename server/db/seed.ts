@@ -10,7 +10,6 @@ const pokemonSeedData = JSON.parse(rawdata.toString());
 const handleError = (error: any) => {
 	if (error) {
 		console.log("handleError error: ", error);
-		return;
 	}
 };
 
